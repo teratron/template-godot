@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="3D First Person Shooter"
-config/icon="res://icon.png"
+config/icon="res://assets/icon.png"
 
 [gdnative]
 
