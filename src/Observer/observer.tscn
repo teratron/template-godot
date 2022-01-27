@@ -13,8 +13,3 @@ visible = false
 
 [node name="ClippedCamera" type="ClippedCamera" parent="."]
 visible = false
-
-[node name="ARVROrigin" type="ARVROrigin" parent="."]
-visible = false
-
-[node name="ARVRCamera" type="ARVRCamera" parent="ARVROrigin"]

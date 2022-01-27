@@ -1,2 +1,2 @@
-class_name ActionVehicle, "res://assets/earth.svg" extends Node
+class_name ActionVehicle, "res://assets/car.svg" extends Node
 
