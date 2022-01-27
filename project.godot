@@ -8,6 +8,28 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "Action",
+"language": "GDScript",
+"path": "res://src/Action/action.gd"
+}, {
+"base": "Reference",
+"class": "ActionCharacter",
+"language": "GDScript",
+"path": "res://src/Action/character.gd"
+}, {
+"base": "Reference",
+"class": "ActionVehicle",
+"language": "GDScript",
+"path": "res://src/Action/vehicle.gd"
+} ]
+_global_script_class_icons={
+"Action": "",
+"ActionCharacter": "",
+"ActionVehicle": ""
+}
+
 [application]
 
 config/name="Game Template 3D"

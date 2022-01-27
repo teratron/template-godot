@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://example_02/camera.gd" type="Script" id=1]
+[ext_resource path="res://example_02/box_static.tscn" type="PackedScene" id=2]
+[ext_resource path="res://example_02/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://example_02/ground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://example_02/box.tscn" type="PackedScene" id=5]
+[ext_resource path="res://example_02/main.gd" type="Script" id=6]
+[ext_resource path="res://example_02/camera_player.gd" type="Script" id=7]
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 6 )
+
+[node name="Ground" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+[node name="Boxes" type="Spatial" parent="."]
+
+[node name="Box" parent="Boxes" instance=ExtResource( 5 )]
+transform = Transform( 0.978921, 0.20424, 0, -0.20424, 0.978921, 0, 0, 0, 1, 0, 10.6919, -17.0063 )
+
+[node name="Box2" parent="Boxes" instance=ExtResource( 5 )]
+transform = Transform( 0.912089, 0.190296, -0.363154, -0.20424, 0.978921, 0, 0.355499, 0.0741705, 0.931729, 6.41698, 10.6919, -7.34309 )
+
+[node name="Box3" parent="Boxes" instance=ExtResource( 5 )]
+transform = Transform( 0.978921, 0.20424, 0, -0.20424, 0.978921, 0, 0, 0, 1, 18.345, 10.6919, -13.5336 )
+
+[node name="Box4" parent="Boxes" instance=ExtResource( 5 )]
+transform = Transform( 0.845196, 0.17634, 0.504528, -0.20424, 0.978921, 0, -0.493893, -0.103045, 0.863396, -7.70037, 10.6919, 5.18888 )
+
+[node name="BoxStatic" parent="Boxes" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.971, 1, -11.876 )
+
+[node name="BoxStatic2" parent="Boxes" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6017, 1, -1.60884 )
+
+[node name="BoxStatic3" parent="Boxes" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7503, 1, -10.5171 )
+
+[node name="BoxStatic4" parent="Boxes" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9338, 1, 7.82789 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 15 )
+current = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 7.21395, 7.61917 )
+speed = 5.0
+script = ExtResource( 7 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.878377, -0.157565, 0.451251, -0.0723587, 0.889384, 0.451397, -0.47246, -0.429149, 0.769813, 6.564, 15, 11.341 )
+shadow_enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
