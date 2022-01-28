@@ -59,7 +59,7 @@ func _process(_delta):
 	#print(action1._iek.pressed)
 	pass
 
-func _input(event):
+func _input(_event):
 	#print(event)
 	#if event is InputEventKey:
 		#print(event)

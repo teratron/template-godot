@@ -5,11 +5,6 @@ const ROTATE = 2
 const GRAVITY = -10
 const SPEED = 500
 var vel = Vector3()
-#var ac = ActionControl.new()
-
-
-func _ready():
-	pass
 
 
 func _process(delta):
@@ -18,7 +13,7 @@ func _process(delta):
 	#rotate_x(0.2)
 	#rotate_y(0.1)
 	#rotate_z(0.05)
-
+	
 	#translation.z -= 0.05
 	#translate(Vector3(0,0,-0.05))
 	
@@ -30,8 +25,6 @@ func _process(delta):
 	var isActionRight = Input.is_action_pressed("ui_right")
 	var isActionUp    = Input.is_action_pressed("ui_up")
 	var isActionDown  = Input.is_action_pressed("ui_down")
-	#print(isActionLeft, " ", isActionRight, " ", isActionUp, " ", isActionDown)
-	#print(Input.is_action_pressed("ui_left"), " ", Input.is_action_pressed("ui_right"), " ", Input.is_action_pressed("ui_up"), " ", Input.is_action_pressed("ui_down"))
 	
 	if isActionLeft && !isActionRight:
 			rotate_y(rot)
