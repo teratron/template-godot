@@ -5,8 +5,6 @@ const ROTATE = 2
 const GRAVITY = -10
 const SPEED = 500
 var vel = Vector3()
-
-
 #var ac = ActionControl.new()
 
 

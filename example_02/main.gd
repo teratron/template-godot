@@ -30,6 +30,11 @@ func _ready():
 	if !cam_world.current && !cam_player.current:
 		cam_world.current = true
 		current = true
+		
+	var iek_2 = InputEventKey.new()
+	iek_2.scancode = KEY_C
+	InputMap.add_action("ui_camera")
+	InputMap.action_add_event("ui_camera", iek_2)
 
 
 func _process(_delta):
