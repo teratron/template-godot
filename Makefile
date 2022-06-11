@@ -1,8 +1,8 @@
 
 set_url: ## git remote set-url origin git@github.com:login/repo.git
-	git remote set-url origin git@github.com:teratron/template-godot-3d.git
+	git remote set-url origin git@github.com:teratron/template-godot.git
 
-message = Update Makefile
+message = Update template
 branch = master
 add_commit_push: ## add commit push
 	git add .
