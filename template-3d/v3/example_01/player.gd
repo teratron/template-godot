@@ -76,4 +76,4 @@ func _physics_process(delta):
 	velocity = velocity.linear_interpolate(direction * speed, accel * delta)
 	movement = velocity + gravity_vec
 
-	move_and_slide_with_snap(movement, snap, Vector3.UP)
+	movement = move_and_slide_with_snap(movement, snap, Vector3.UP)
