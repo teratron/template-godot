@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1wdkbu08gwgp"]
+
+[ext_resource type="PackedScene" uid="uid://2f6ahm4jk6xg" path="res://3d/gravity_point/gravity_dependent.tscn" id="1_dc1yu"]
+[ext_resource type="PackedScene" uid="uid://b2j0faryp7s2l" path="res://3d/gravity_point/gravity_object.tscn" id="2_xudbt"]
+
+[node name="World" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_dc1yu")]
+
+[node name="Planet" parent="." instance=ExtResource("2_xudbt")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.980628, 0.195878, 0, -0.195878, 0.980628, 0, 0.82991, 2.18628)
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.802134, 1.37302, 0.576088)
+visible = false
+metadata/_edit_lock_ = true

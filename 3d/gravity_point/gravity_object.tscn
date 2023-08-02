@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2j0faryp7s2l"]
+
+[ext_resource type="PackedScene" uid="uid://c647wgqvwmts2" path="res://3d/gravity_point/gravity_point.tscn" id="1_ue57y"]
+
+[node name="GravityObject" type="Node3D"]
+
+[node name="GravityPoint" parent="." instance=ExtResource("1_ue57y")]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+flip_faces = true
+radius = 2.0
+radial_segments = 16
+rings = 8
+metadata/_edit_lock_ = true
