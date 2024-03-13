@@ -10,7 +10,5 @@ config_version=5
 
 [application]
 
-config/name="Godot Template v4"
-run/main_scene="res://3d/gravity_point/world.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://assets/icon.svg"
+config/name="Godot Template v4: Gravity Point"
+config/icon="res://icon.svg"
