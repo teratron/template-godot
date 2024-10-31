@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1wdkbu08gwgp"]
 
-[ext_resource type="PackedScene" uid="uid://2f6ahm4jk6xg" path="res://3d/gravity_point/gravity_dependent.tscn" id="1_dc1yu"]
-[ext_resource type="PackedScene" uid="uid://b2j0faryp7s2l" path="res://3d/gravity_point/gravity_object.tscn" id="2_xudbt"]
+[ext_resource type="PackedScene" uid="uid://2f6ahm4jk6xg" path="res://gravity_dependent.tscn" id="1_dc1yu"]
+[ext_resource type="PackedScene" uid="uid://b2j0faryp7s2l" path="res://gravity_object.tscn" id="2_xudbt"]
 
 [node name="World" type="Node3D"]
 

@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1exly1cbo10v"]
+
+[ext_resource type="Script" path="res://game_scene.gd" id="1_e010t"]
+[ext_resource type="Texture2D" uid="uid://cdwckr7ur4c6c" path="res://resources/Sprites/icon.svg" id="2_ois5a"]
+
+[sub_resource type="FontVariation" id="FontVariation_cuol6"]
+variation_embolden = 2.0
+spacing_glyph = 5
+spacing_space = 5
+
+[node name="GameScene" type="Node3D"]
+script = ExtResource("1_e010t")
+
+[node name="DeleteThis" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27451, 0, 0.25098, 0)
+
+[node name="Icon" type="Sprite2D" parent="DeleteThis"]
+position = Vector2(322, 200)
+texture = ExtResource("2_ois5a")
+
+[node name="Label" type="Label" parent="DeleteThis"]
+layout_mode = 0
+offset_top = 42.0
+offset_right = 640.0
+offset_bottom = 87.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("FontVariation_cuol6")
+theme_override_font_sizes/font_size = 32
+text = "This could be YOUR Game!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="DeleteThis"]
+layout_mode = 0
+offset_top = 316.0
+offset_right = 640.0
+offset_bottom = 339.0
+text = "- press escape to open pause menu -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]

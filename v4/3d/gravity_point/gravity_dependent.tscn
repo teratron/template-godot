@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://2f6ahm4jk6xg"]
 
-[ext_resource type="Script" path="res://3d/gravity_point/gravity_dependent.gd" id="1_olfqh"]
+[ext_resource type="Script" path="res://gravity_dependent.gd" id="1_olfqh"]
 
 [node name="GravityDependent" type="Node3D"]
 script = ExtResource("1_olfqh")

@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4nalordjijrh"]
+
+[ext_resource type="Script" path="res://menus/main/main_menu.gd" id="1_2ya0w"]
+[ext_resource type="StyleBox" uid="uid://c2nqiwudvaseb" path="res://resources/Styles/Standard Button/standard_button_normal_style.tres" id="3_o7gka"]
+[ext_resource type="StyleBox" uid="uid://doq33mqbb3i7r" path="res://resources/Styles/Standard Button/standard_button_hover_style.tres" id="4_mxkqu"]
+[ext_resource type="StyleBox" uid="uid://dd6kvr76jafiq" path="res://resources/Styles/Standard Button/standard_button_pressed_style.tres" id="5_virqm"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2ya0w")
+
+[node name="GodotLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 25.0
+offset_right = 542.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 64
+text = "GODOT 4.2"
+vertical_alignment = 1
+
+[node name="ProjectTemplateLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 92.0
+offset_right = 468.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 32
+text = "Project Template"
+vertical_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 207.0
+offset_right = 391.0
+offset_bottom = 318.0
+pivot_offset = Vector2(64, 0)
+theme_override_constants/separation = 12
+
+[node name="StartButton" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/hover = ExtResource("4_mxkqu")
+theme_override_styles/pressed = ExtResource("5_virqm")
+theme_override_styles/normal = ExtResource("3_o7gka")
+text = "START"
+
+[node name="SettingsButton" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/hover = ExtResource("4_mxkqu")
+theme_override_styles/pressed = ExtResource("5_virqm")
+theme_override_styles/normal = ExtResource("3_o7gka")
+text = "SETTINGS"
+
+[node name="QuitButton" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/hover = ExtResource("4_mxkqu")
+theme_override_styles/pressed = ExtResource("5_virqm")
+theme_override_styles/normal = ExtResource("3_o7gka")
+text = "QUIT"
+
+[connection signal="pressed" from="Buttons/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Buttons/QuitButton" to="." method="_on_quit_button_pressed"]

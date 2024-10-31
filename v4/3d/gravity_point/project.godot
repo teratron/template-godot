@@ -11,4 +11,5 @@ config_version=5
 [application]
 
 config/name="Godot Template v4: Gravity Point"
+config/features=PackedStringArray("4.2")
 config/icon="res://icon.svg"
